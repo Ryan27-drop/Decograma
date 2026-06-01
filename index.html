@@ -767,12 +767,16 @@
   </div>
 
   <div class="contact-form reveal">
-    <input type="text" placeholder="Nombre completo">
-    <input type="tel" placeholder="Teléfono / WhatsApp">
-    <input type="email" placeholder="Correo electrónico">
-    <input type="text" placeholder="Tipo de proyecto (jardín, green de golf, etc.)">
-    <textarea rows="4" placeholder="Cuéntenos sobre su proyecto..."></textarea>
-    <button class="btn-primary" style="width:100%; font-size:0.85rem;" onclick="enviarFormulario(this)">Enviar mensaje</button>
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contacto">
+      <p style="display:none"><input name="bot-field"></p>
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="text" name="proyecto" placeholder="Tipo de proyecto (jardín, green de golf, etc.)">
+      <textarea name="mensaje" rows="4" placeholder="Cuéntenos sobre su proyecto..."></textarea>
+      <button type="submit" class="btn-primary" style="width:100%; font-size:0.85rem;">Enviar mensaje</button>
+    </form>
   </div>
 </section>
 
@@ -847,3 +851,4 @@ reveals.forEach(r => observer.observe(r));
 </script>
 </body>
 </html>
+
