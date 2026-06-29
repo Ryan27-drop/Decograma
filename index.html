@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Decograma CR — Césped Sintético & Greens de Golf</title>
+<title>Decograma CR — Césped Sintético Premium</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -22,98 +22,8 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
-
-
-  /* ── PORTAFOLIO ── */
-  .portfolio {
-    padding: 7rem 5vw;
-    background: var(--cream);
-  }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.2rem;
-    margin-top: 3rem;
-  }
-
-  .portfolio-card {
-    position: relative;
-    border-radius: 3px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    background: #ddd;
-    cursor: pointer;
-  }
-
-  .portfolio-card img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-    display: block;
-  }
-
-  .portfolio-card:hover img { transform: scale(1.05); }
-
-  .portfolio-card-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(10,42,26,0.8) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: flex; align-items: flex-end;
-    padding: 1.2rem;
-  }
-
-  .portfolio-card:hover .portfolio-card-overlay { opacity: 1; }
-
-  .portfolio-card-overlay span {
-    color: var(--gold-light);
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .portfolio-placeholder {
-    width: 100%; height: 100%;
-    background: var(--green-pale);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 0.5rem;
-    color: var(--text-light);
-    font-size: 0.8rem;
-    border: 2px dashed #ccc;
-    border-radius: 3px;
-  }
-
-  .portfolio-placeholder svg { opacity: 0.3; }
-
-  /* Lightbox */
-  .lightbox {
-    display: none;
-    position: fixed; inset: 0; z-index: 999;
-    background: rgba(0,0,0,0.92);
-    align-items: center; justify-content: center;
-  }
-  .lightbox.open { display: flex; }
-  .lightbox img {
-    max-width: 90vw; max-height: 90vh;
-    object-fit: contain;
-    border-radius: 2px;
-  }
-  .lightbox-close {
-    position: absolute; top: 1.5rem; right: 2rem;
-    color: white; font-size: 2rem; cursor: pointer;
-    background: none; border: none; line-height: 1;
-  }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
 
   /* ── NAV ── */
   nav {
@@ -124,228 +34,54 @@
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(201, 168, 76, 0.2);
   }
-
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--gold-light);
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
-
-  .nav-links {
-    display: flex; gap: 2rem; list-style: none;
-  }
-
-  .nav-links a {
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--gold-light); letter-spacing: 0.02em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--gold-light); }
 
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
     background:
-      linear-gradient(to bottom, rgba(10,42,26,0.7) 0%, rgba(10,42,26,0.3) 50%, rgba(10,42,26,0.8) 100%),
-      url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80') center/cover no-repeat;
+      linear-gradient(to bottom, rgba(10,42,26,0.65) 0%, rgba(10,42,26,0.25) 50%, rgba(10,42,26,0.75) 100%),
+      url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center;
-    padding: 6rem 5vw 4rem;
-    position: relative;
+    text-align: center; padding: 6rem 5vw 4rem; position: relative;
   }
+  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; color: var(--white); line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 580px; line-height: 1.7; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+  .hero-scroll { position: absolute; bottom: 2rem; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0; animation: fadeUp 1s 1.2s forwards; }
+  .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(201,168,76,0.8), transparent); animation: scrollPulse 2s 1.5s infinite; }
 
-  .hero-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.2rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.2s forwards;
-  }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 7vw, 6rem);
-    font-weight: 300;
-    color: var(--white);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.4s forwards;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.8);
-    max-width: 560px;
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.6s forwards;
-  }
-
-  .hero-cta {
-    display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.8s forwards;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--green-deep);
-    padding: 0.85rem 2.2rem;
-    border: none; border-radius: 2px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    display: inline-block;
-  }
-
+  /* ── BUTTONS ── */
+  .btn-primary { background: var(--gold); color: var(--green-deep); padding: 0.85rem 2.2rem; border: none; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--white);
-    padding: 0.85rem 2.2rem;
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 2px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-    transition: border-color 0.2s, background 0.2s;
-    display: inline-block;
-  }
-
+  .btn-outline { background: transparent; color: var(--white); padding: 0.85rem 2.2rem; border: 1px solid rgba(255,255,255,0.4); border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: border-color 0.2s, background 0.2s; display: inline-block; }
   .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.1); }
 
-  .hero-scroll {
-    position: absolute; bottom: 2rem;
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-    color: rgba(255,255,255,0.5);
-    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
-    opacity: 0; animation: fadeUp 1s 1.2s forwards;
-  }
+  /* ── SECTION COMMONS ── */
+  .section-label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-turf); margin-bottom: 0.8rem; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; color: var(--green-deep); line-height: 1.15; margin-bottom: 1rem; }
+  .section-sub { font-size: 1rem; color: var(--text-mid); max-width: 540px; line-height: 1.7; margin-bottom: 3.5rem; }
 
-  .scroll-line {
-    width: 1px; height: 40px;
-    background: linear-gradient(to bottom, rgba(201,168,76,0.8), transparent);
-    animation: scrollPulse 2s 1.5s infinite;
-  }
-
-  /* ── SECCIÓN SERVICIOS ── */
-  .services {
-    padding: 7rem 5vw;
-    background: var(--white);
-  }
-
-  .section-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--green-turf);
-    margin-bottom: 0.8rem;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
-    font-weight: 300;
-    color: var(--green-deep);
-    line-height: 1.15;
-    margin-bottom: 1rem;
-  }
-
-  .section-sub {
-    font-size: 1rem;
-    color: var(--text-mid);
-    max-width: 540px;
-    line-height: 1.7;
-    margin-bottom: 3.5rem;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5px;
-    background: #ddd;
-    border: 1.5px solid #ddd;
-    overflow: hidden;
-    border-radius: 4px;
-  }
-
-  .service-card {
-    background: var(--white);
-    padding: 2.5rem 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s;
-  }
-
+  /* ── SERVICIOS ── */
+  .services { padding: 7rem 5vw; background: var(--white); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5px; background: #ddd; border: 1.5px solid #ddd; overflow: hidden; border-radius: 4px; }
+  .service-card { background: var(--white); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: background 0.3s; }
   .service-card:hover { background: var(--green-pale); }
-
-  .service-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0;
-    width: 3px; height: 0;
-    background: var(--gold);
-    transition: height 0.4s;
-  }
-
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s; }
   .service-card:hover::before { height: 100%; }
-
-  .service-icon {
-    width: 48px; height: 48px;
-    background: var(--green-pale);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1.2rem;
-    transition: background 0.3s;
-  }
-
+  .service-icon { width: 48px; height: 48px; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; transition: background 0.3s; }
   .service-card:hover .service-icon { background: rgba(201,168,76,0.15); }
-
   .service-icon svg { width: 22px; height: 22px; stroke: var(--green-turf); fill: none; stroke-width: 1.5; }
+  .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.6rem; }
+  .service-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; }
 
-  .service-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: var(--green-deep);
-    margin-bottom: 0.6rem;
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-    color: var(--text-mid);
-    line-height: 1.65;
-  }
-
-  /* ── GOLF FEATURE ── */
-  .golf-feature {
+  /* ── PET FRIENDLY SECTION ── */
+  .pet-section {
     padding: 7rem 5vw;
     background: var(--green-deep);
     display: grid;
@@ -353,294 +89,106 @@
     gap: 5vw;
     align-items: center;
   }
-
-  @media (max-width: 768px) {
-    .golf-feature { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-  }
-
-  .golf-feature-img {
-    border-radius: 2px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-  }
-
-  .golf-feature-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    filter: saturate(0.9);
-  }
-
-  .golf-feature-text .section-label { color: var(--gold); }
-  .golf-feature-text .section-title { color: var(--white); }
-  .golf-feature-text .section-sub { color: rgba(255,255,255,0.65); }
-
-  .feature-list {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 0.8rem;
-    margin-bottom: 2rem;
-  }
-
-  .feature-list li {
-    display: flex; align-items: flex-start; gap: 0.8rem;
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.5;
-  }
-
-  .check {
-    width: 18px; height: 18px; flex-shrink: 0;
-    background: rgba(201,168,76,0.2);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin-top: 1px;
-  }
-
-  .check::after {
-    content: '';
-    width: 6px; height: 4px;
-    border-left: 1.5px solid var(--gold);
-    border-bottom: 1.5px solid var(--gold);
-    transform: rotate(-45deg) translateY(-1px);
-  }
-
-  /* ── CALCULADORA ── */
-  .calculator {
-    padding: 7rem 5vw;
-    background: var(--cream);
-  }
-
-  .calc-container {
-    max-width: 780px;
-    margin: 0 auto;
-    background: var(--white);
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid #e0dbd0;
-  }
-
-  .calc-header {
-    background: var(--green-deep);
-    padding: 2.5rem 3rem;
-  }
-
-  .calc-header .section-label { color: var(--gold); margin-bottom: 0.5rem; }
-
-  .calc-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--white);
-  }
-
-  .calc-body { padding: 2.5rem 3rem; }
-
-  .calc-row {
+  .pet-section-text .section-label { color: var(--gold); }
+  .pet-section-text .section-title { color: var(--white); }
+  .pet-section-text .section-sub { color: rgba(255,255,255,0.65); }
+  .pet-visual {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
   }
+  .pet-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px;
+    padding: 1.8rem 1.4rem;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .pet-card:hover { background: rgba(201,168,76,0.08); border-color: rgba(201,168,76,0.5); }
+  .pet-card .pet-emoji { font-size: 2.4rem; margin-bottom: 0.8rem; display: block; }
+  .pet-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 0.4rem; }
+  .pet-card p { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+  .pet-features { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin: 1.5rem 0 2rem; }
+  .pet-features li { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
+  .check { width: 18px; height: 18px; flex-shrink: 0; background: rgba(201,168,76,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .check::after { content: ''; width: 6px; height: 4px; border-left: 1.5px solid var(--gold); border-bottom: 1.5px solid var(--gold); transform: rotate(-45deg) translateY(-1px); }
 
-  @media (max-width: 600px) {
+  /* ── GOLF FEATURE ── */
+  .golf-feature { padding: 7rem 5vw; background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: center; }
+  .golf-feature-img { border-radius: 2px; overflow: hidden; aspect-ratio: 4/3; }
+  .golf-feature-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.9); }
+  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
+  .feature-list li { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 0.9rem; color: var(--text-mid); line-height: 1.5; }
+
+  /* ── PORTAFOLIO ── */
+  .portfolio { padding: 7rem 5vw; background: var(--white); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; margin-top: 3rem; }
+  .portfolio-card { position: relative; border-radius: 3px; overflow: hidden; aspect-ratio: 4/3; background: #ddd; cursor: pointer; }
+  .portfolio-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+  .portfolio-card:hover img { transform: scale(1.05); }
+  .portfolio-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,42,26,0.8) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 1.2rem; }
+  .portfolio-card:hover .portfolio-card-overlay { opacity: 1; }
+  .portfolio-card-overlay span { color: var(--gold-light); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 2px; }
+  .lightbox-close { position: absolute; top: 1.5rem; right: 2rem; color: white; font-size: 2rem; cursor: pointer; background: none; border: none; line-height: 1; }
+
+  /* ── CALCULADORA ── */
+  .calculator { padding: 7rem 5vw; background: var(--cream); }
+  .calc-container { max-width: 780px; margin: 0 auto; background: var(--white); border-radius: 4px; overflow: hidden; border: 1px solid #e0dbd0; }
+  .calc-header { background: var(--green-deep); padding: 2.5rem 3rem; }
+  .calc-header .section-label { color: var(--gold); margin-bottom: 0.5rem; }
+  .calc-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--white); }
+  .calc-body { padding: 2.5rem 3rem; }
+  .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .calc-field label { display: block; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; }
+  .calc-field input, .calc-field select { width: 100%; padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 1rem; color: var(--text-dark); background: var(--cream); transition: border-color 0.2s; -webkit-appearance: none; }
+  .calc-field input:focus, .calc-field select:focus { outline: none; border-color: var(--green-turf); background: var(--white); }
+  .calc-divider { height: 1px; background: #e8e4da; margin: 1.5rem 0; }
+  .calc-result { background: var(--green-deep); border-radius: 3px; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .result-block { text-align: center; }
+  .result-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+  .result-value { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--gold-light); line-height: 1; }
+  .result-unit { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.2rem; }
+  .result-divider-v { width: 1px; background: rgba(255,255,255,0.1); margin: auto; height: 50px; align-self: center; }
+  .calc-note { font-size: 0.8rem; color: var(--text-light); line-height: 1.6; padding: 1rem; background: var(--cream); border-radius: 2px; border-left: 3px solid var(--green-light); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--green-deep); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(201,168,76,0.15); }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold-light); font-weight: 600; }
+  footer p { font-size: 0.78rem; color: rgba(255,255,255,0.35); letter-spacing: 0.03em; }
+
+  /* ── CONTACT ── */
+  .contact-icon { width: 40px; height: 40px; flex-shrink: 0; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .contact-icon svg { width: 18px; height: 18px; stroke: var(--green-turf); fill: none; stroke-width: 1.5; }
+  .contact-info-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+  .contact-info-text strong { display: block; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.2rem; }
+  .contact-info-text span { font-size: 0.95rem; color: var(--text-dark); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes scrollPulse { 0%, 100% { opacity: 0.4; transform: scaleY(1); } 50% { opacity: 1; transform: scaleY(1.15); } }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s, transform 0.7s; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .pet-section { grid-template-columns: 1fr; }
+    .golf-feature { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
     .calc-row { grid-template-columns: 1fr; }
     .calc-body { padding: 1.5rem; }
     .calc-header { padding: 1.5rem; }
-  }
-
-  .calc-field label {
-    display: block;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-  }
-
-  .calc-field input, .calc-field select {
-    width: 100%;
-    padding: 0.85rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    color: var(--text-dark);
-    background: var(--cream);
-    transition: border-color 0.2s;
-    -webkit-appearance: none;
-  }
-
-  .calc-field input:focus, .calc-field select:focus {
-    outline: none;
-    border-color: var(--green-turf);
-    background: var(--white);
-  }
-
-  .calc-divider {
-    height: 1px;
-    background: #e8e4da;
-    margin: 1.5rem 0;
-  }
-
-  .calc-result {
-    background: var(--green-deep);
-    border-radius: 3px;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  @media (max-width: 600px) {
     .calc-result { grid-template-columns: 1fr; }
+    .pet-visual { grid-template-columns: 1fr 1fr; }
   }
-
-  .result-block { text-align: center; }
-
-  .result-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    margin-bottom: 0.4rem;
+  @media (max-width: 480px) {
+    .pet-visual { grid-template-columns: 1fr; }
   }
-
-  .result-value {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--gold-light);
-    line-height: 1;
-  }
-
-  .result-unit {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.4);
-    margin-top: 0.2rem;
-  }
-
-  .result-divider-v {
-    width: 1px;
-    background: rgba(255,255,255,0.1);
-    margin: auto;
-    height: 50px;
-    align-self: center;
-  }
-
-  .calc-note {
-    font-size: 0.8rem;
-    color: var(--text-light);
-    line-height: 1.6;
-    padding: 1rem;
-    background: var(--cream);
-    border-radius: 2px;
-    border-left: 3px solid var(--green-light);
-  }
-
-  /* ── CONTACTO ── */
-  .contact {
-    padding: 7rem 5vw;
-    background: var(--white);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5vw;
-    align-items: start;
-  }
-
-  @media (max-width: 768px) { .contact { grid-template-columns: 1fr; } }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.85rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    color: var(--text-dark);
-    background: var(--cream);
-    margin-bottom: 1rem;
-    transition: border-color 0.2s;
-    resize: none;
-  }
-
-  .contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--green-turf);
-    background: var(--white);
-  }
-
-  .contact-info-item {
-    display: flex; gap: 1rem; align-items: flex-start;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-icon {
-    width: 40px; height: 40px; flex-shrink: 0;
-    background: var(--green-pale);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  .contact-icon svg { width: 18px; height: 18px; stroke: var(--green-turf); fill: none; stroke-width: 1.5; }
-
-  .contact-info-text strong {
-    display: block;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 0.2rem;
-  }
-
-  .contact-info-text span {
-    font-size: 0.95rem;
-    color: var(--text-dark);
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--green-deep);
-    padding: 2rem 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    border-top: 1px solid rgba(201,168,76,0.15);
-  }
-
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: var(--gold-light);
-    font-weight: 600;
-  }
-
-  footer p {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.35);
-    letter-spacing: 0.03em;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes scrollPulse {
-    0%, 100% { opacity: 0.4; transform: scaleY(1); }
-    50% { opacity: 1; transform: scaleY(1.15); }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s, transform 0.7s;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -650,6 +198,7 @@
   <a href="#" class="nav-logo">Decograma CR</a>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#mascotas">Pet Friendly</a></li>
     <li><a href="#golf">Greens de Golf</a></li>
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#cotizacion">Cotización</a></li>
@@ -660,8 +209,8 @@
 <!-- HERO -->
 <section class="hero">
   <p class="hero-eyebrow">Costa Rica · Césped Sintético Premium</p>
-  <h1>Espacios que se ven <em>vivos</em><br>todo el año</h1>
-  <p>Instalaciones de césped sintético para jardines, terrazas y greens de golf en Costa Rica. Acabados de nivel internacional.</p>
+  <h1>Tu espacio, <em>siempre verde</em><br>todo el año</h1>
+  <p>Jardines residenciales, terrazas, zonas para mascotas y greens de golf. Transformamos cualquier espacio con césped sintético de nivel internacional.</p>
   <div class="hero-cta">
     <a href="#cotizacion" class="btn-primary">Cotizar ahora</a>
     <a href="#servicios" class="btn-outline">Ver servicios</a>
@@ -677,7 +226,7 @@
   <div class="reveal">
     <p class="section-label">Lo que hacemos</p>
     <h2 class="section-title">Soluciones en<br>zacate sintético</h2>
-    <p class="section-sub">Instalamos césped artificial de alta durabilidad para cualquier espacio, desde jardines residenciales hasta greens de golf profesionales.</p>
+    <p class="section-sub">Instalamos césped artificial de alta durabilidad para todo tipo de espacio — desde jardines familiares con mascotas hasta greens de golf profesionales.</p>
   </div>
   <div class="services-grid reveal">
     <div class="service-card">
@@ -685,7 +234,14 @@
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       </div>
       <h3>Jardines residenciales</h3>
-      <p>Transformamos su jardín con zacate sintético de primera calidad. Sin mantenimiento, verde permanente.</p>
+      <p>Verde permanente sin mantenimiento. Ideal para familias que quieren disfrutar su jardín sin complicaciones.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <h3>Zonas pet-friendly</h3>
+      <p>Áreas diseñadas para perros y gatos: sin barro, sin alérgenos, fácil de limpiar. Un ecosistema seguro para tus mascotas.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">
@@ -699,14 +255,61 @@
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
       </div>
       <h3>Espacios comerciales</h3>
-      <p>Oficinas, hoteles, restaurantes y centros comerciales con instalaciones duraderas de alto uso.</p>
+      <p>Oficinas, hoteles, restaurantes y centros comerciales con instalaciones duraderas de alto tráfico.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Terrazas & balcones</h3>
+      <p>Convertimos terrazas y balcones en espacios vivos y funcionales. Solución ideal para apartamentos y condominios.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       </div>
       <h3>Consultoría y diseño</h3>
-      <p>Asesoramos desde el diseño hasta la instalación final. Visita técnica gratuita.</p>
+      <p>Asesoramos desde el diseño hasta la instalación final. Visita técnica gratuita en el GAM.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PET FRIENDLY -->
+<section class="pet-section" id="mascotas">
+  <div class="pet-section-text reveal">
+    <p class="section-label">Ecosistema natural</p>
+    <h2 class="section-title">Un espacio para toda<br>la <em style="font-style:italic; color: var(--gold-light);">familia</em> — incluyendo<br>los de cuatro patas</h2>
+    <p class="section-sub">Nuestro césped sintético está diseñado para convivir con perros, gatos y toda la familia. Sin barro, sin pesticidas, sin alergias.</p>
+    <ul class="pet-features">
+      <li><span class="check"></span>Superficie no tóxica, segura para mascotas y niños</li>
+      <li><span class="check"></span>Drenaje eficiente — los líquidos pasan a través sin acumularse</li>
+      <li><span class="check"></span>Resistente a las garras — no se rompe ni deforma con el uso</li>
+      <li><span class="check"></span>Sin barro ni charcos después de la lluvia</li>
+      <li><span class="check"></span>Fácil de limpiar con agua, sin productos químicos</li>
+      <li><span class="check"></span>Sin parásitos, garrapatas ni hongos en la superficie</li>
+    </ul>
+    <a href="#cotizacion" class="btn-primary" style="background: var(--gold); color: var(--green-deep);">Cotizar zona pet-friendly</a>
+  </div>
+  <div class="pet-visual reveal">
+    <div class="pet-card">
+      <span class="pet-emoji">🐕</span>
+      <h4>Perros</h4>
+      <p>Espacio limpio para correr y jugar sin ensuciar la casa</p>
+    </div>
+    <div class="pet-card">
+      <span class="pet-emoji">🐈</span>
+      <h4>Gatos</h4>
+      <p>Superficie suave y segura para explorar al aire libre</p>
+    </div>
+    <div class="pet-card">
+      <span class="pet-emoji">🌿</span>
+      <h4>Jardín vivo</h4>
+      <p>Verde todo el año sin pesticidas ni fertilizantes</p>
+    </div>
+    <div class="pet-card">
+      <span class="pet-emoji">👨‍👩‍👧</span>
+      <h4>Familia</h4>
+      <p>Zona de juego segura para niños pequeños también</p>
     </div>
   </div>
 </section>
@@ -716,16 +319,16 @@
   <div class="golf-feature-img reveal">
     <img src="green-golf.jpeg" alt="Green de golf sintético instalado por Decograma CR">
   </div>
-  <div class="golf-feature-text reveal">
+  <div class="reveal">
     <p class="section-label">Especialidad Premium</p>
     <h2 class="section-title">Greens de golf que<br>ruedan de verdad</h2>
-    <p class="section-sub">Diseñamos y construimos greens de putting y chipping para residencias, clubes y academias. En cada proyecto se garantiza calidad y experiencia.</p>
+    <p class="section-sub">Diseñamos y construimos greens de putting y chipping para residencias, clubes y academias. Calidad de torneo en tu propiedad.</p>
     <ul class="feature-list">
-      <li><span class="check"></span>Diseño topográfico personalizado con caídas y ondulaciones</li>
-      <li><span class="check"></span>Fibras de 12–15mm especiales para rodamiento de pelota</li>
-      <li><span class="check"></span>Arena silicea como relleno de estabilización</li>
-      <li><span class="check"></span>Drenaje subterráneo incluido en toda instalación</li>
-      <li><span class="check"></span>Garantía de 10 años en materiales y mano de obra</li>
+      <li><span class="check" style="background: rgba(201,168,76,0.15);"></span>Diseño topográfico personalizado con caídas y ondulaciones</li>
+      <li><span class="check" style="background: rgba(201,168,76,0.15);"></span>Fibras de 12–15mm especiales para rodamiento de pelota</li>
+      <li><span class="check" style="background: rgba(201,168,76,0.15);"></span>Arena silicea como relleno de estabilización</li>
+      <li><span class="check" style="background: rgba(201,168,76,0.15);"></span>Drenaje subterráneo incluido en toda instalación</li>
+      <li><span class="check" style="background: rgba(201,168,76,0.15);"></span>Garantía de 10 años en materiales y mano de obra</li>
     </ul>
     <a href="#cotizacion" class="btn-primary">Cotizar mi green</a>
   </div>
@@ -736,58 +339,41 @@
   <div class="reveal">
     <p class="section-label">Nuestro trabajo</p>
     <h2 class="section-title">Proyectos realizados</h2>
-    <p class="section-sub">Cada instalación es única. Estos son algunos de los proyectos que hemos completado en Costa Rica.</p>
+    <p class="section-sub">Jardines, terrazas, zonas para mascotas y greens de golf. Estos son algunos de los proyectos que hemos completado en Costa Rica.</p>
   </div>
-
   <div class="portfolio-grid reveal">
-
-    <!-- Para agregar una imagen: reemplaza el bloque portfolio-placeholder con:
-         <div class="portfolio-card">
-           <img src="nombre-foto.jpeg" alt="Descripción del proyecto">
-           <div class="portfolio-card-overlay"><span>Nombre del proyecto</span></div>
-         </div>
-    -->
-
     <div class="portfolio-card" onclick="abrirLightbox('green-golf.jpeg')">
       <img src="green-golf.jpeg" alt="Green de golf sintético residencial">
       <div class="portfolio-card-overlay"><span>Green residencial · Guanacaste</span></div>
     </div>
-
     <div class="portfolio-card" onclick="abrirLightbox('proyecto-jardin-cancha.jpeg')">
       <img src="proyecto-jardin-cancha.jpeg" alt="Zacate sintético en jardín residencial con cerca blanca">
       <div class="portfolio-card-overlay"><span>Jardín residencial</span></div>
     </div>
-
     <div class="portfolio-card" onclick="abrirLightbox('proyecto-green-mirador.jpeg')">
       <img src="proyecto-green-mirador.jpeg" alt="Putting green sintético con vista panorámica al atardecer">
       <div class="portfolio-card-overlay"><span>Green con mirador</span></div>
     </div>
-
     <div class="portfolio-card" onclick="abrirLightbox('proyecto-terraza-piscina.jpeg')">
       <img src="proyecto-terraza-piscina.jpeg" alt="Zacate sintético alrededor de piscina con vista al mar">
       <div class="portfolio-card-overlay"><span>Terraza junto a piscina</span></div>
     </div>
-
     <div class="portfolio-card" onclick="abrirLightbox('proyecto-patio-pergola.jpeg')">
       <img src="proyecto-patio-pergola.jpeg" alt="Patio con zacate sintético, pérgola y zona de BBQ">
       <div class="portfolio-card-overlay"><span>Patio con pérgola</span></div>
     </div>
-
     <div class="portfolio-card" onclick="abrirLightbox('proyecto-putting-green.jpeg')">
       <img src="proyecto-putting-green.jpeg" alt="Putting green sintético con bunkers y múltiples banderas">
       <div class="portfolio-card-overlay"><span>Putting green con bunkers</span></div>
     </div>
-
     <div class="portfolio-card" onclick="abrirLightbox('proyecto-green-bambu.jpeg')">
       <img src="proyecto-green-bambu.jpeg" alt="Putting green sintético en terraza con vista a bambú y montaña">
       <div class="portfolio-card-overlay"><span>Green con vista a la montaña</span></div>
     </div>
-
     <div class="portfolio-card" onclick="abrirLightbox('proyecto-patio-jardin-vertical.jpeg')">
       <img src="proyecto-patio-jardin-vertical.jpeg" alt="Patio interior con zacate sintético y jardín vertical">
       <div class="portfolio-card-overlay"><span>Patio con jardín vertical</span></div>
     </div>
-
   </div>
 </section>
 
@@ -824,9 +410,10 @@
           <label>Tipo de instalación</label>
           <select id="tipo" onchange="calcular()">
             <option value="40">Jardín residencial — $40/m²</option>
+            <option value="40">Zona pet-friendly — $40/m²</option>
             <option value="55">Espacio comercial — $55/m²</option>
-            <option value="75">Green de golf — $75/m²</option>
             <option value="65">Terraza/balcón — $65/m²</option>
+            <option value="75">Green de golf — $75/m²</option>
           </select>
         </div>
         <div class="calc-field">
@@ -834,9 +421,7 @@
           <input type="number" id="area_manual" placeholder="O ingrese área directa" min="0.1" step="0.1" oninput="calcularManual()">
         </div>
       </div>
-
       <div class="calc-divider"></div>
-
       <div class="calc-result" id="resultado">
         <div class="result-block">
           <p class="result-label">Área total</p>
@@ -856,11 +441,9 @@
           <p class="result-unit">dólares</p>
         </div>
       </div>
-
       <div class="calc-note">
         <strong>Nota:</strong> Este es un estimado preliminar. El precio final puede variar según complejidad del terreno, preparación de base, accesorios y acceso al sitio. Contáctenos para una visita técnica y cotización formal sin costo.
       </div>
-
       <div style="margin-top: 1.5rem; text-align: center;">
         <a href="https://wa.me/50687915934?text=Hola%2C%20me%20interesa%20una%20cotización%20de%20instalación%20de%20zacate%20sintético." target="_blank" class="btn-primary">💬 Solicitar cotización por WhatsApp</a>
       </div>
@@ -869,12 +452,11 @@
 </section>
 
 <!-- CONTACTO -->
-<section class="contact" id="contacto" style="display:flex; flex-direction:column; align-items:center; text-align:center; padding: 7rem 5vw;">
+<section id="contacto" style="background: var(--white); padding: 7rem 5vw; display:flex; flex-direction:column; align-items:center; text-align:center;">
   <div class="reveal" style="max-width: 640px;">
     <p class="section-label">Estamos en Costa Rica</p>
     <h2 class="section-title">Hablemos de<br>su proyecto</h2>
     <p class="section-sub" style="margin: 1rem auto 2.5rem;">Visita técnica gratuita en el área metropolitana. Escríbanos por WhatsApp y le respondemos en menos de 24 horas.</p>
-
     <a href="https://wa.me/50687915934?text=Hola%2C%20me%20interesa%20una%20cotización%20de%20instalación%20de%20zacate%20sintético."
        target="_blank"
        style="display:inline-flex; align-items:center; gap:0.75rem; background:#25D366; color:#fff; padding:1rem 2.5rem; border-radius:2px; text-decoration:none; font-size:1rem; font-weight:500; letter-spacing:0.04em; transition: background 0.2s, transform 0.15s; margin-bottom: 2.5rem;"
@@ -883,24 +465,17 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Escribir por WhatsApp
     </a>
-
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-top:1rem;">
       <div class="contact-info-item" style="flex-direction:column; align-items:center; gap:0.5rem;">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" color="#2d6a42"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
+        <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" color="#2d6a42"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
         <div class="contact-info-text"><strong>Teléfono</strong><span>+506 8791-5934</span></div>
       </div>
       <div class="contact-info-item" style="flex-direction:column; align-items:center; gap:0.5rem;">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" color="#2d6a42"><path d="M21 2H3v16h5v4l4-4h5l4-4V2z"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="13" y2="12"/></svg>
-        </div>
+        <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" color="#2d6a42"><path d="M21 2H3v16h5v4l4-4h5l4-4V2z"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="13" y2="12"/></svg></div>
         <div class="contact-info-text"><strong>Instagram</strong><span>@decogramacr</span></div>
       </div>
       <div class="contact-info-item" style="flex-direction:column; align-items:center; gap:0.5rem;">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" color="#2d6a42"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
+        <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" color="#2d6a42"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div class="contact-info-text"><strong>Zona de servicio</strong><span>GAM y todo Costa Rica</span></div>
       </div>
     </div>
@@ -919,63 +494,33 @@ function calcular() {
   const largo = parseFloat(document.getElementById('largo').value) || 0;
   const ancho = parseFloat(document.getElementById('ancho').value) || 0;
   const precio = parseInt(document.getElementById('tipo').value);
-
-  if (largo > 0 && ancho > 0) {
-    const area = largo * ancho;
-    mostrarResultado(area, precio);
-    document.getElementById('area_manual').value = '';
-  } else {
-    limpiarResultado();
-  }
+  if (largo > 0 && ancho > 0) { mostrarResultado(largo * ancho, precio); document.getElementById('area_manual').value = ''; }
+  else limpiarResultado();
 }
-
 function calcularManual() {
   const area = parseFloat(document.getElementById('area_manual').value) || 0;
   const precio = parseInt(document.getElementById('tipo').value);
-
-  if (area > 0) {
-    mostrarResultado(area, precio);
-    document.getElementById('largo').value = '';
-    document.getElementById('ancho').value = '';
-  } else {
-    limpiarResultado();
-  }
+  if (area > 0) { mostrarResultado(area, precio); document.getElementById('largo').value = ''; document.getElementById('ancho').value = ''; }
+  else limpiarResultado();
 }
-
 function mostrarResultado(area, precio) {
-  const total = area * precio;
   document.getElementById('res-area').textContent = area.toFixed(2);
   document.getElementById('res-precio').textContent = '$' + precio;
-  document.getElementById('res-total').textContent = '$' + total.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+  document.getElementById('res-total').textContent = '$' + (area * precio).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
 }
-
 function limpiarResultado() {
-  document.getElementById('res-area').textContent = '—';
-  document.getElementById('res-precio').textContent = '—';
-  document.getElementById('res-total').textContent = '—';
+  ['res-area','res-precio','res-total'].forEach(id => document.getElementById(id).textContent = '—');
 }
-
 document.getElementById('tipo').addEventListener('change', function() {
   const largo = parseFloat(document.getElementById('largo').value);
   const ancho = parseFloat(document.getElementById('ancho').value);
   const manual = parseFloat(document.getElementById('area_manual').value);
-  if (largo > 0 && ancho > 0) calcular();
-  else if (manual > 0) calcularManual();
+  if (largo > 0 && ancho > 0) calcular(); else if (manual > 0) calcularManual();
 });
-
-function enviarFormulario(btn) {
-  btn.textContent = '✓ Mensaje enviado';
-  btn.style.background = 'var(--green-turf)';
-  btn.style.color = 'white';
-  btn.disabled = true;
-}
-
-const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
-reveals.forEach(r => observer.observe(r));
-
+document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
 function abrirLightbox(src) {
   document.getElementById('lightbox-img').src = src;
   document.getElementById('lightbox').classList.add('open');
